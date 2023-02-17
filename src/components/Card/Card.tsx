@@ -1,7 +1,9 @@
+import React from 'react'
+
 type CardProps = {
-  title: string;
-  content: string;
-};
+  title: string
+  content: string
+}
 
 export const Card = ({ title, content }: CardProps) => {
   return (
@@ -11,5 +13,5 @@ export const Card = ({ title, content }: CardProps) => {
         <p className="text-red-700 text-base">{content}</p>
       </div>
     </div>
-  );
-};
+  )
+}
