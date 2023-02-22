@@ -3,13 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/rds-tailwindui.cjs.js",
-  "module": "dist/rds-tailwindui.es.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/rds-tailwindui.umd.js",
+  "module": "./dist/rds-tailwindui.es.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "/dist",
     "/dist/index.css"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/rds-tailwindui.es.js",
+      "require": "./dist/rds-tailwindui.umd.js"
+    }
+  },
   "size-limit": [
     {
       "path": "dist/rds-tailwindui.es.js",

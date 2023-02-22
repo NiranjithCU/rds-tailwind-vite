@@ -9,20 +9,20 @@ import {
 import { XMarkIcon } from '@heroicons/react/20/solid'
 
 export interface ToasterProps {
-  children?: React.ReactElement
+  children?: React.ReactElement[]
 }
 
 export interface ToastBaseProps {
-  children?: React.ReactElement
+  children?: React.ReactElement[]
   type: 'success' | 'error' | 'warning' | 'info'
 }
 
 export interface ToastTitleProps {
-  children?: React.ReactElement
+  children?: React.ReactElement[]
 }
 
 export interface ToastContentProps {
-  children?: React.ReactElement
+  children?: React.ReactElement[]
 }
 
 const Toaster = ({ children }: ToasterProps) => {
