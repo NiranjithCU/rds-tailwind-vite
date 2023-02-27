@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, PropsWithChildren, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import {
   CheckCircleIcon,
@@ -8,24 +8,11 @@ import {
 } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 
-export interface ToasterProps {
-  children?: React.ReactElement[]
-}
-
 export interface ToastBaseProps {
-  children?: React.ReactElement[]
   type: 'success' | 'error' | 'warning' | 'info'
 }
 
-export interface ToastTitleProps {
-  children?: React.ReactElement[]
-}
-
-export interface ToastContentProps {
-  children?: React.ReactElement[]
-}
-
-const Toaster = ({ children }: ToasterProps) => {
+const Toaster = ({ children }: PropsWithChildren) => {
   return (
     <div
       aria-live="assertive"
@@ -36,15 +23,15 @@ const Toaster = ({ children }: ToasterProps) => {
   )
 }
 
-const Title = ({ children }: ToastTitleProps) => {
+const Title = ({ children }: PropsWithChildren) => {
   return <p className="text-sm font-medium text-gray-900">{children}</p>
 }
 
-const Content = ({ children }: ToastContentProps) => {
+const Content = ({ children }: PropsWithChildren) => {
   return <p className="mt-1 text-sm text-gray-500">{children}</p>
 }
 
-const ToastBase = ({ children, type }: ToastBaseProps) => {
+const ToastBase = ({ children, type }: PropsWithChildren<ToastBaseProps>) => {
   const [showToast, setShowToast] = useState(true)
 
   const toastTypes = {
