@@ -31,7 +31,7 @@ export const Button = ({ primary = false, size = 'medium', backgroundColor, labe
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['cu-red storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
