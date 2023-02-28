@@ -2,6 +2,7 @@
   "name": "rds-tailwindui",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/rds-tailwindui.umd.js",
   "module": "./dist/rds-tailwindui.es.js",
@@ -71,23 +72,29 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
+    "formik": "^2.2.9",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prop-types": "^15.8.1",
+    "rds-tailwind-theme": "^0.3.0",
+    "react-quill": "^2.0.0",
     "size-limit": "^8.2.4",
     "storybook": "^7.0.0-beta.48",
     "tailwindcss": "^3.2.6",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vite-plugin-dts": "^1.7.3",
-    "vite-tsconfig-paths": "^4.0.5"
+    "vite-tsconfig-paths": "^4.0.5",
+    "yup": "^1.0.2"
   },
   "peerDependencies": {
     "@headlessui/react": "^1.7.11",
     "@heroicons/react": "^2.0.16",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.2.6"
+    "tailwindcss": "^3.2.6",
+    "yup": "^1.0.2"
   }
 }
