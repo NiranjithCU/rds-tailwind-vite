@@ -9,7 +9,7 @@ export interface SelectProps {
   options?: [
     {
       label: string
-      value: string | number
+      value: string
     },
   ]
 }

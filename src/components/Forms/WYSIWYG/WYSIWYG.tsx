@@ -5,17 +5,17 @@ import { ExclamationCircleIcon } from '@heroicons/react/24/solid'
 import { formErrorStyles, formStyles } from '../../../utils/formClasses'
 
 export interface WYSIWYGProps {
+  name: string
   label?: string
   type?: string
-  name: string
+  editor?: React.ElementType | string
   placeholder?: string
-  Editor?: any
 }
 
 export const WYSIWYG = ({
   label,
+  editor = 'textarea',
   placeholder,
-  Editor = 'textarea',
   ...props
 }: WYSIWYGProps & InputHTMLAttributes<HTMLInputElement> & ClassAttributes<HTMLInputElement>) => {
   const [field, meta] = useField(props)
@@ -56,6 +56,8 @@ export const WYSIWYG = ({
   //   'image',
   //   'video',
   // ];
+
+  const Editor = editor
 
   return (
     <>

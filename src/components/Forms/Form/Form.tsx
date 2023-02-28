@@ -43,7 +43,7 @@ const FormBase = ({
   Object.keys(schema).map((key) => {
     defaults[key] = schema[key].value
     rules[key] = schema[key].validation
-    return [defaults, rules]
+    return [defaults, rules] as const
   })
 
   return (
