@@ -8,7 +8,6 @@ export interface SelectProps {
   name: string
   options?: [
     {
-      name: string
       label: string
       value: string | number
     },
