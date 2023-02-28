@@ -1,12 +1,12 @@
 import React, { Fragment, PropsWithChildren, useState } from 'react'
 import { Transition } from '@headlessui/react'
+import { XMarkIcon } from '@heroicons/react/20/solid'
 import {
   CheckCircleIcon,
   ExclamationCircleIcon,
   InformationCircleIcon,
   ShieldExclamationIcon,
 } from '@heroicons/react/24/outline'
-import { XMarkIcon } from '@heroicons/react/20/solid'
 
 export interface ToastBaseProps {
   type: 'success' | 'error' | 'warning' | 'info'
@@ -93,12 +93,15 @@ const ToastBase = ({ children, type }: PropsWithChildren<ToastBaseProps>) => {
   )
 }
 
-ToastBase.displayName = 'Toast'
-Title.displayName = 'Toast.Title'
-Content.displayName = 'Toast.Content'
-
+// Export Component
 export const Toast = Object.assign(ToastBase, {
   Toaster,
   Title,
   Content,
 })
+
+// Display Name
+ToastBase.displayName = 'Toast'
+Title.displayName = 'Toast.Title'
+Content.displayName = 'Toast.Content'
+Toaster.displayName = 'Toaster'

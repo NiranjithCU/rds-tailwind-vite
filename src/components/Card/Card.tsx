@@ -3,7 +3,7 @@ type CardProps = {
   content: string
 }
 
-const CardBase = ({ title, content }: CardProps) => {
+export const Card = ({ title, content }: CardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <div className="px-6 py-4">
@@ -14,4 +14,4 @@ const CardBase = ({ title, content }: CardProps) => {
   )
 }
 
-export const Card = Object.assign(CardBase)
+Card.displayName = 'Card'
